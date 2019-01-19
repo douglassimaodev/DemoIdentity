@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-DemoIdentity.Presentation-36C9414D-9E37-46EE-BE49-05B85E745232</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\DemoIdentity.AppData\DemoIdentity.AppData.csproj" />
+    <ProjectReference Include="..\DemoIdentity.Domain\DemoIdentity.Domain.csproj" />
+    <ProjectReference Include="..\DemoIdentity.IdentityIsolated\DemoIdentity.IdentityIsolated.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<div class="text-center">
+    <h1 class="display-4">Admin</h1>
+    <p>Usuario: admin@demo.com</p>
+    <p>Senha: @@Adm123456</p>
+</div>
+<div class="text-center">
+    <h1 class="display-4">Usuario Normal</h1>
+    <p>Usuario: user@demo.com</p>
+    <p>Senha: @@Use123456</p>
+</div>
+
+<h1>Permissões</h1>
+
+@if (PermissionHelper.IfClaim(PermissionHelper.PodeVerAdminPage))
+{
+    <h1 class="display-4">Pode Ver Admin Page</h1>   
+}
+
+@if (PermissionHelper.IfClaim(PermissionHelper.PodeVerBotaoGlobal))
+{
+    <h1 class="display-4">Pode Ver Botao Global</h1>
+}
+
+@if (PermissionHelper.IfClaim(PermissionHelper.Create))
+{
+    <h1 class="display-4">Pode Criar</h1>
+}
+
+@if (PermissionHelper.IfClaim(PermissionHelper.Read))
+{
+    <h1 class="display-4">Pode Ler</h1>
+}
+
+@if (PermissionHelper.IfClaim(PermissionHelper.Update))
+{
+    <h1 class="display-4">Pode Atualizar</h1>
+}
+
+@if (PermissionHelper.IfClaim(PermissionHelper.Delete))
+{
+    <h1 class="display-4">Pode Deletar</h1>
+}
